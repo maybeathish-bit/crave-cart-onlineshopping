@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8e9">
+  <meta name="description" content="Crave Cart — big bites, happy vibes. Order pizza, burgers, desserts and drinks.">
+  <title>Crave Cart — Big bites, happy vibes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="entry-screen" id="entryScreen" aria-labelledby="entryTitle">
+    <div class="entry-card">
+      <a class="brand brand--large" href="#home" aria-label="Crave Cart home"><span class="brand-mark">CC<span>✳</span></span><span><b>CRAVE CART</b><small>GOOD FOOD. GOOD MOOD.</small></span></a>
+      <p class="eyebrow">Quick pit stop before the good stuff</p>
+      <h1 id="entryTitle">First, tell us<br><em>where to send joy.</em></h1>
+      <p class="entry-intro">A few details help us get your cravings to the right door.</p>
+      <form id="entryForm" novalidate>
+        <label for="guestName">Your name</label><input id="guestName" name="name" autocomplete="name" placeholder="e.g. Ananya Rao" required minlength="2">
+        <label for="guestPhone">Mobile number</label><input id="guestPhone" name="phone" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" required>
+        <label for="guestAddress">Delivery address</label><textarea id="guestAddress" name="address" autocomplete="street-address" placeholder="House / street, area, city" required minlength="8" rows="2"></textarea>
+        <p class="form-error" id="entryError" role="alert"></p>
+        <button class="button button--coral button--full" type="submit">Let’s get this party started <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="entry-footnote">Your details stay on this device for your order.</p>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Crave Cart home"><span class="brand-mark">CC<span>✳</span></span><span><b>CRAVE CART</b><small>GOOD FOOD. GOOD MOOD.</small></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="#home" data-view="home">Home</a><a href="#menu" data-view="menu">The menu</a></nav>
+    <div class="header-actions"><button class="guest-chip" id="editGuest" type="button"><span class="guest-dot"></span><span id="guestLabel">Your details</span><span class="edit-label">Edit</span></button><button class="cart-link" id="cartOpen" type="button" aria-label="Open shopping cart"><span aria-hidden="true">🛒</span> Cart <span class="cart-count" id="cartCount">0</span></button><button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button></div>
+  </header>
+
+  <main>
+    <section class="view active" id="homeView" aria-label="Home">
+      <section class="hero" id="home">
+        <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-pill">Fresh, fast & full of fun</span></p><h1>Your cravings<br>called. They want<br><em>the good stuff.</em></h1><p class="hero-description">Hot pizza, stacked burgers, dreamy desserts. Big bites, happy vibes — delivered right to your door.</p><div class="hero-actions"><a class="button button--coral" href="#menu" data-view="menu">Explore the menu <span aria-hidden="true">↗</span></a><span class="hero-note">Made fresh · Packed with happy</span></div><div class="hero-doodle doodle-star" aria-hidden="true">✳</div></div>
+        <div class="hero-visual"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><img class="hero-image" src="assets/food/photo-1568901346375-23c9450c58cd.jpg" alt="Juicy double cheeseburger stacked with lettuce and tomato"><span class="hero-sticker sticker-top">100%<small>CRAVEABLE</small></span><span class="hero-sticker sticker-bottom">BITE<br>ME! <i>♥</i></span><span class="float-chip fries-chip" aria-hidden="true">🍟</span><span class="float-chip sparkle-chip" aria-hidden="true">✦</span></div>
+        <div class="hero-index">01 <span></span> GOOD MOOD MENU</div>
+      </section>
+      <section class="marquee-strip" aria-label="Fresh food, happy mood"><div>GOOD FOOD <span>✳</span> GOOD MOOD <span>✳</span> GREAT CRAVINGS <span>✳</span> GOOD FOOD <span>✳</span> GOOD MOOD <span>✳</span> GREAT CRAVINGS <span>✳</span></div></section>
+      <section class="welcome-section"><div class="section-kicker"><span>01</span> YOUR HAPPY PLACE</div><h2>Life’s better with<br><em>extra cheese.</em></h2><p>From first bite to last lick, we make the kind of food that turns an ordinary day into a little celebration.</p><a href="#menu" data-view="menu" class="text-link">Meet your new favourites <span>→</span></a></section>
+      <section class="home-feature"><div class="feature-photo" role="img" aria-label="A fresh pizza topped with pepperoni and melted cheese"><span class="feature-badge">HOT<br><b>& FRESH</b></span></div><div class="feature-copy"><div class="section-kicker"><span>02</span> THE CROWD-PLEASER</div><h2>Cheese pull<br>kind of <em>day.</em></h2><p>Gather your people, grab a slice, and let the good times roll. Your next favourite is one click away.</p><a href="#menu" data-view="menu" class="button button--blue">Find your flavour <span>↗</span></a></div></section>
+      <section class="offer-band"><span class="offer-spark">✦</span><div><small>A LITTLE TREAT FROM US</small><h2>Free delivery on orders over ₹999!</h2></div><a href="#menu" data-view="menu">Make it a big one <span>→</span></a></section>
+    </section>
+
+    <section class="view menu-view" id="menuView" aria-label="Menu">
+      <div class="page-heading"><p class="eyebrow"><span class="eyebrow-pill">Made for your mood</span></p><h1>Pick your <em>happy.</em></h1><p>From cheesy classics to sweet little endings — we’ve got your craving.</p></div>
+      <div class="menu-toolbar"><div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Menu categories"></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="menuSearch" type="search" placeholder="Find your craving" aria-label="Search menu"></label></div>
+      <div class="menu-meta"><span id="menuCategoryLabel">All the good stuff</span><span>Prices in Indian Rupees · Inclusive of taxes</span></div>
+      <div class="product-grid" id="productGrid"></div><div class="empty-state" id="emptyMenu" hidden>No bites found. Try another search.</div>
+    </section>
+
+    <section class="view cart-view" id="cartView" aria-label="Shopping cart">
+      <div class="page-heading page-heading--compact"><p class="eyebrow"><span class="eyebrow-pill">Almost there</span></p><h1>Your happy <em>bag.</em></h1></div>
+      <div class="cart-layout"><div class="cart-items" id="cartItems"></div><aside class="order-summary"><p class="eyebrow">THE DAMAGE (THE GOOD KIND)</p><h2>Order total</h2><div class="summary-line"><span>Subtotal</span><span id="subtotalValue">₹0</span></div><div class="summary-line"><span>Delivery</span><span id="deliveryValue">₹0</span></div><p class="delivery-note" id="deliveryNote">A small delivery charge for the journey.</p><div class="summary-total"><span>Total</span><strong id="totalValue">₹0</strong></div><button id="placeOrder" class="button button--coral button--full" type="button">Place my order <span aria-hidden="true">↗</span></button><p class="secure-note">Demo checkout · No payment collected</p><a href="#menu" data-view="menu" class="text-link">← Keep browsing</a></aside></div>
+      <div class="cart-empty" id="cartEmpty"><span class="empty-ornament">🍕</span><h2>Your bag needs<br><em>a little happy.</em></h2><p>Pick something delicious and we’ll take it from here.</p><a href="#menu" data-view="menu" class="button button--coral">Explore the menu <span>↗</span></a></div>
+    </section>
+
+    <section class="view receipt-view" id="receiptView" aria-label="Order confirmation">
+      <div class="success-heading"><span class="success-icon">✓</span><p class="eyebrow"><span class="eyebrow-pill">High five, great choice!</span></p><h1>Order placed.<br><em>Happy dance.</em></h1><p>Your cravings are in good hands. Here’s your order snapshot.</p></div>
+      <article class="receipt" id="receipt"></article><div class="receipt-actions"><button class="button button--coral" id="newOrder" type="button">Back to the good stuff <span>↗</span></button><button class="button button--outline" id="printReceipt" type="button">Print receipt</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark">CC<span>✳</span></span><span><b>CRAVE CART</b><small>GOOD FOOD. GOOD MOOD.</small></span></div><span>Big bites, happy vibes.</span><span>© <span id="year"></span> Crave Cart</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
